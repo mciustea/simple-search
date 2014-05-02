@@ -3,7 +3,10 @@ $(function(){
 
 })
 
-
+// Input: query string, results container, result HTML template
+// Effect: makes an AJAX call to the server to get the results of the
+// query, and then injects results into the DOM
+// Output: void
 function search(query, $container, $template){
     $.ajax({
         type: 'GET',
