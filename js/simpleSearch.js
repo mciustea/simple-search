@@ -17,6 +17,7 @@ function renderResults(docs, $container, $template){
             .prop( href, doc.url);
         result.find( ".url" ).append( doc.url );
         result.find( "content " ).append( doc.content );
+        result.removeClass( "template" );
         $container.add(result);
     });
 }
