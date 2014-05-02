@@ -6,17 +6,43 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 15px;
+    line-height: 1.2;
     color: #333;
 }
 
 h1 {
-    font-family: "Open Sans", sans-serif;
     font-size: 350%;
     font-weight: 300;
     text-align: center;
     color: #777;
     margin-bottom: 40px;
     padding-top: 50px;
+}
+
+h3 {
+    font-size: 135%;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+a {
+    color: #303E5E;
+}
+
+.url {
+    color: #152343;
+    font-size: 110%;
+}
+
+.content {
+    margin-top: 10px;
+    margin-right: 30%;
+}
+
+#results {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .container {
