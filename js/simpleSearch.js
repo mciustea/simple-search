@@ -1,6 +1,8 @@
 // Doc ready
 $(function(){
-
+    $( "button#search" ).click(function(){
+        search( $( "input#query" ).val(), $( "#results" ), $( ".template.result" ) );
+    });
 })
 
 // Input: query string, results container, result HTML template
