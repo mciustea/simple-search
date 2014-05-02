@@ -17,10 +17,25 @@ function renderResults(docs, $container, $template){
             .find( "h3" )
             .append( doc.title );
         result.find( ".url" ).append( doc.url );
-        result.find( ".content" ).append( doc.content );
+        result.find( ".content" ).append( maxWords(doc.content, 100) );
         result.removeClass( "template" );
         $container.append(result);
     });
+}
+
+// Cuts off lengthy content to a given maximum number of words
+// Input: string of words, maximum number of words
+// Effects: none
+// Output: the trimmed words
+function maxWords(content, max) {
+    var words = content.split(' ', max);
+    var idx;
+    var cutContent = "";
+    for (idx = 0; idx < words.length; idx++) {
+	cutContent += words[idx];
+	cutContent += (idx + 1 == words.length ? "" : " ");
+    }
+    return cutContent + "...";
 }
 
 var testDocs = [
