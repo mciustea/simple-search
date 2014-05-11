@@ -12,18 +12,18 @@ $(function(){
 function search(query, $container, $template){
     $.ajax({
         type: 'GET',
-        url: 'http://128.95.157.44',
+        url: 'http://128.95.157.44:8080/solr-example/collection1/select',
         dataType: 'JSONP',
         data: {
-	    'q': query,
-	    'qf': 'content title^3.0',
-	    'wt': 'json',
-	    'indent': 'false',
-	    'defType': 'edismax',
+            'q': query,
+            'qf': 'content title^3.0',
+            'wt': 'json',
+            'indent': 'false',
+            'defType': 'edismax',
         },
         jsonp: 'json.wrf',
         success: function (data) {
-	    renderResults(data.response.docs, $container, $template);
+            renderResults(data.response.docs, $container, $template);
         }
     });
 }
